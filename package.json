@@ -6,21 +6,38 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prettier": "npx prettier . --write",
+    "check:prettier": "npx prettier . --check"
   },
   "dependencies": {
+    "@ai-sdk/openai": "^0.0.40",
+    "@radix-ui/react-slot": "^1.1.0",
+    "ai": "^3.3.0",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
+    "lucide-react": "^0.424.0",
+    "next": "14.2.5",
+    "ollama-ai-provider": "^0.11.0",
     "react": "^18",
     "react-dom": "^18",
-    "next": "14.2.5"
+    "react-dropzone": "^14.2.3",
+    "react-markdown": "^9.0.1",
+    "tailwind-merge": "^2.4.0",
+    "tailwindcss-animate": "^1.0.7",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
-    "typescript": "^5",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-tailwindcss": "^3.17.4",
     "postcss": "^8",
+    "prettier": "3.3.3",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.5"
+    "typescript": "^5"
   }
 }

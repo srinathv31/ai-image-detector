@@ -2,7 +2,7 @@
 
 import { type CoreMessage } from "ai";
 import { useState } from "react";
-import { continueConversation } from "./actions";
+import { continueConversationWithData } from "../actions";
 import { readStreamableValue } from "ai/rsc";
 import { Trash } from "lucide-react";
 import Markdown from "react-markdown";
@@ -36,7 +36,7 @@ export default function Chat() {
           setMessages(newMessages);
           setInput("");
 
-          const result = await continueConversation(newMessages);
+          const result = await continueConversationWithData(newMessages);
 
           if (typeof result === "string") {
             setMessages([
@@ -63,7 +63,7 @@ export default function Chat() {
         <input
           className="fixed bottom-0 mb-8 w-full max-w-md rounded border border-gray-300 p-2 shadow-xl"
           value={input}
-          placeholder="Say something..."
+          placeholder="Analyze data..."
           onChange={(e) => setInput(e.target.value)}
         />
       </form>
